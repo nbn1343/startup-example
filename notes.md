@@ -1,4 +1,4 @@
-I learned many great things from this assingment. This is what I want to note vv
+I learned many great things from this assingment. This is what I want to note - 
 
 ***This is the pattern that you want to make a reflexive part of your development process:***
 ```
