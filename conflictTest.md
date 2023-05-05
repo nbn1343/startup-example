@@ -1,1 +1,1 @@
-Hello, this is making another change.
+Hello, this is making a change in the file to test the merge.
