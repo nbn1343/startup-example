@@ -1,1 +1,2 @@
-Hello, this is making a change in the file to test the merge.
+Hello, this is making a different change to test the merge for the second time.
+
