@@ -7,3 +7,8 @@ The task is simply to organize the numbers in order from 1-15. You will be timed
 Will you be quickest to solve?
 # Design
 ![image of design of web application.](Cs260.png.png)
+
+# Key Features
+* Secure login over HTTPS
+* 
+
