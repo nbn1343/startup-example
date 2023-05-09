@@ -10,5 +10,8 @@ Will you be quickest to solve?
 
 # Key Features
 * Secure login over HTTPS
-* 
+* Numbers scramble at start and when restart button is click
+* Timer begins when first move is made and stops when complete
+* Leaderboard shown and displayed in realtime
+* Results are persistently stored
 
