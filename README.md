@@ -20,7 +20,8 @@ Here are the required technologies and how they will be used:
 * **HTML** - Three HTML pages created. Use correct HTML structure for the pages. First page is for login. Second page is for game play and time score. Third page shows complete leaderboard and times. Hyperlinks to choice pages.
 * **CSS** - Apply correct styling on pages. Specifically design the game to look smooth and playable.
 * **JavaScript** - Provides login, display, and gameplay.
-* **Service** - 
+* **Service** - Backend service with endpoints for:
+- Login
 * **DB** - Store players and time scores.
 * **Login** - Login users. Previous users stored in DB and able to see their previous best.
 * **Websocket** - When a player is working on the puzzle or completing a puzzle, they are broadcast for users to see.
