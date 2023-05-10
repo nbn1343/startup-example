@@ -25,3 +25,12 @@ Here are the required technologies and how they will be used:
 * **Login** - Login users. Previous users stored in DB and able to see their previous best.
 * **Websocket** - When a player is working on the puzzle or completing a puzzle, they are broadcast for users to see.
 * **React** - Application ported to use the React web framework.
+
+## HTML Deliverable
+For this I added the structure of the web application.
+* **HTML pages** - Three HTML pages that represent the ability to login with a username and password, play the game, and see the scoreboard of the top players.
+* **Links** - Each page has a link to the other pages. 
+* **Game** - I rough coded the design of what the basic game looks like. The function of the game will be implemented later.
+* **Login** - An input box and submit button for the player to put in their username and password.
+* **Database** - The scoreboard represent data pulled from the database.
+* **WebSocket** - The time score and the scoreboard on the game page represent realtime scores and updates.
