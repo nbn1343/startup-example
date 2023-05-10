@@ -25,4 +25,3 @@ Here are the required technologies and how they will be used:
 * **Login** - Login users. Previous users stored in DB and able to see their previous best.
 * **Websocket** - When a player is working on the puzzle or completing a puzzle, they are broadcast for users to see.
 * **React** - Application ported to use the React web framework.
-
