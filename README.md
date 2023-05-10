@@ -21,7 +21,7 @@ Here are the required technologies and how they will be used:
 * **CSS** - Apply correct styling on pages. Specifically design the game to look smooth and playable.
 * **JavaScript** - Provides login, display, and gameplay.
 * **Service** - Backend service with endpoints for:
-                - Login
+                * Login
 * **DB** - Store players and time scores.
 * **Login** - Login users. Previous users stored in DB and able to see their previous best.
 * **Websocket** - When a player is working on the puzzle or completing a puzzle, they are broadcast for users to see.
