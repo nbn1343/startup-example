@@ -32,5 +32,5 @@ For this I added the structure of the web application.
 * **Links** - Each page has a link to the other pages. 
 * **Game** - I rough coded the design of what the basic game looks like. The function of the game will be implemented later.
 * **Login** - An input box and submit button for the player to put in their username and password.
-* **Database** - The scoreboard represent data pulled from the database.
+* **Database** - The scoreboard represents data pulled from the database.
 * **WebSocket** - On the play page, there is realtime data showing players who have just started a game as well as ones who have finished with their time score.
