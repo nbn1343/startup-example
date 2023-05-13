@@ -2,6 +2,7 @@ header {
     color: #196d12;
     padding: 15px;
     text-align: left;
+    
 }
 
 h1 {
@@ -21,7 +22,3 @@ main {
     padding: 20px;
     margin: 12em;
   }
-  
-.submit {
-
-}
