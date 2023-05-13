@@ -20,5 +20,24 @@ main {
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    margin: 12em;
+    margin: 11em;
   }
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    margin: em
+}
+
+.username {
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    margin: 1em;
+    margin-bottom: 1.5em;
+    border: 1px solid #196d12;
+    border-radius: 5px;
+}
