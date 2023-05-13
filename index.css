@@ -1,5 +1,4 @@
 header {
-    background-color: #333;
     color: #196d12;
     padding: 15px;
     text-align: left;
@@ -22,3 +21,7 @@ main {
     padding: 20px;
     margin: 12em;
   }
+  
+.submit {
+
+}
