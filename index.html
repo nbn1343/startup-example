@@ -25,16 +25,15 @@
       <!-- Navigation elements -->
       <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="play.html">Play</a>
-              <a class="nav-link" href="scores.html">Scores</a>
-            </div>
+            <form class="container-fluid justify-content-start">
+              <a class="btn btn-sm btn-outline-dark"  href="index.html">Home</a>
+              <a class="btn btn-sm btn-outline-dark"  href="play.html">Play</a>
+              <a class="btn btn-sm btn-outline-dark"  href="scores.html">Score</a>
+            </form>
           </div>
         </div>
       </nav>
@@ -44,8 +43,7 @@
     </header>
 
     <main>
-      <h1>Welcome</h1>
-      <p>Login to play:</p>
+      <h1>Login</h1>
       <input typ="text" id="username" name="varUsername" placeholder="Enter username here" />
       <button type="submit" class="btn btn-primary">Login</button>
     <form method="get" action="play.html">
