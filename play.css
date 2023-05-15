@@ -157,6 +157,8 @@ main {
 }
 
 .button {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.774);
     background: rgb(92, 154, 182);
@@ -239,3 +241,27 @@ main {
     font-weight: bold;
 }
 
+.nav-item {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.nav-item:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+.game-buttons {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.774);
+    padding: 20px 40px;
+    border-radius: 6px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    
+  }  
