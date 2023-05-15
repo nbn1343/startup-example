@@ -301,7 +301,22 @@ footer {
     justify-content: space-around;
     padding: 10px;
 }
-.user-chat {
+.list-group {
     align-self: baseline;
     background-color: rgba(255, 255, 255, 0.774);
+    border-radius: 5px;
+}
+
+.fw-bold {
+    font-weight: bold;
+    color: #2dc0c5;
+}
+
+.user-comment {
+    color: #0638db;
+    font-weight: bold;
+}
+.game-notification {
+    color: #b80000;
+    font-weight: bold;
 }
