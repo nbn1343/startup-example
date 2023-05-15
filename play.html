@@ -46,40 +46,32 @@
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
     </header>
-
+        
     <main>
       <h1>Play</h1>
         <p><button>Start</button></p>
         <p><button>Reset</button></p>
         <form method="get" action="play.html"></form>
         <p><button>Quit</button></p>
-        <table>
-            <tr>
-                <th>[ 01]</th>
-                <th>[ 02]</th>
-                <th>[ 03]</th>
-                <th>[ 04]</th>
-            </tr>
-            <tr>
-                <th>[ 05]</th>
-                <th>[ 06]</th>
-                <th>[ 07]</th>
-                <th>[ 08]</th>
-            </tr>
-            <tr>
-                <th>[ 09]</th>
-                <th>[ 10]</th>
-                <th>[ 11]</th>
-                <th>[ 12]</th>
-            </tr>
-            <tr>
-                <th>[ 13]</th>
-                <th>[ 14]</th>
-                <th>[ 15]</th>
-                <th>[__]</th>
-            </tr>
+
+        <figure class="SlidingPuzzleFigure">
+
+          <section>
+            <ul class="SlidingPuzzle">
+              <p class="Tile Tile1">1</p>
+              <p class="Tile Tile2">2</p>
+              <p class="Tile Tile3">3</p>
+              <p class="Tile Tile4">4</p>
+              <p class="Tile Tile5">5</p>
+              <p class="Tile Tile6">6</p>
+              <p class="Tile Tile7">7</p>
+              <p class="Tile Tile8">8</p>
+            </ul>
+      
+        
+      
+      
             
-        </table>
         <label for="time">Time:</label>
         <input type="text" id="time" name="varTime" readonly/>
         <ul class="scores">
