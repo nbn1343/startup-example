@@ -27,51 +27,6 @@ main {
     
   }
 
-.s {
-    background-color: #e94f12;
-    margin: .2em;
-    rotate: 13deg;
-    border-bottom: 3px solid #e94f12;
-    border: 3px solid #e94f12;
-}
-
-.l {
-    color: black;
-    background-color: #c0ca2e;
-    margin: .2em;
-    rotate: -13deg;
-    border: 3px solid #c0ca2e;
-}
-
-.i {
-    background-color: #05b414;
-    margin: .2em;
-    rotate: 13deg;
-    border: 3px solid #05b414;
-}
-
-.d {
-    color:#000000;
-    background-color: #cc00cc;
-    margin: .2em;
-    rotate: -13deg;
-    border: 3px solid #cc00cc;
-}
-
-.e {
-    background-color: #a10000;
-    margin: .2em;
-    rotate: 13deg;
-    border: 3px solid #a10000;
-}
-
-.r {
-    background-color: #5f00b8;
-    margin: .2em;
-    rotate: -13deg;
-    border: 3px solid #5f00b8;
-}
-
 .SlidingPuzzle {
     padding: 9px 9px;
     height: 230px;
@@ -179,6 +134,11 @@ main {
 .s {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    background-color: #e94f12;
+    margin: .2em;
+    rotate: 13deg;
+    border-bottom: 3px solid #e94f12;
+    border: 3px solid #e94f12;
 
 }.s:hover {
     color: rgba(255, 255, 255, 1);
@@ -190,16 +150,27 @@ main {
 .l {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    color: black;
+    background-color: #c0ca2e;
+    margin: .2em;
+    rotate: -13deg;
+    border: 3px solid #c0ca2e;
 
 }.l:hover {
     color: rgb(255, 255, 255);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     border-color: rgb(255, 255, 255);
-    font-weight: bold;}
+    font-weight: bold;
+    
+}
 
 .i {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    background-color: #05b414;
+    margin: .2em;
+    rotate: 13deg;
+    border: 3px solid #05b414;
 
 }.i:hover {
     color: rgba(255, 255, 255, 1);
@@ -211,6 +182,11 @@ main {
 .d {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    color:#000000;
+    background-color: #cc00cc;
+    margin: .2em;
+    rotate: -13deg;
+    border: 3px solid #cc00cc;
 
 }.d:hover {
     color: rgba(255, 255, 255, 1);
@@ -222,6 +198,10 @@ main {
 .e {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    background-color: #a10000;
+    margin: .2em;
+    rotate: 13deg;
+    border: 3px solid #a10000;
 
 }.e:hover {
     color: rgba(255, 255, 255, 1);
@@ -233,6 +213,10 @@ main {
 .r {
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
+    background-color: #5f00b8;
+    margin: .2em;
+    rotate: -13deg;
+    border: 3px solid #5f00b8;
 
 }.r:hover {
     color: rgba(255, 255, 255, 1);
@@ -266,7 +250,7 @@ main {
     
   } 
   
-  .slider-image {
+.slider-image {
     padding: px;
     height: 100%;
     margin: 6px;
@@ -300,6 +284,8 @@ footer {
     align-items: left;
     justify-content: space-around;
     padding: 10px;
+    text-align: left;
+    align-self: left;
 }
 .list-group {
     align-self: baseline;
@@ -315,8 +301,15 @@ footer {
 .user-comment {
     color: #0638db;
     font-weight: bold;
+    font-style: italic;
 }
 .game-notification {
     color: #b80000;
     font-weight: bold;
+    font-style: italic;
+}
+.game-completion {
+    color: #00b800;
+    font-weight: bold;
+    font-style: italic;
 }
