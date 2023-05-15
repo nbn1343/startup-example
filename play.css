@@ -264,4 +264,44 @@ main {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     
-  }  
+  } 
+  
+  .slider-image {
+    padding: px;
+    height: 100%;
+    margin: 6px;
+  }
+
+.time {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(201, 24, 24);
+    border-radius: 5px;
+    outline: #000000 solid 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 5px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+footer {
+    flex: 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    padding: 10px;
+}
+.user-chat {
+    align-self: baseline;
+    background-color: rgba(255, 255, 255, 0.774);
+}
