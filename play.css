@@ -78,16 +78,35 @@ main {
     width: 230px;
     margin: 3em;
 }
+.tile-game {
+    background-color: #000000;
+    padding: 9px 9px;
+}
 
-.Tile {
+.tile1 {
     float: left;
-    border-top: 6px solid #CCCCCC;
-    border-left: 6px solid #CCCCCC;
-    border-right: 6px solid #787878;
-    border-bottom: 6px solid #787878;
-    background: #fff;
-    width: 58px;
-    height: 49px;
+    border-top: 6px solid #ff6464;
+    border-left: 6px solid #ff6464;
+    border-right: 6px solid #7a0303;
+    border-bottom: 3px solid #7a0303;
+    background: #ff0000;
+    width: 60px;
+    height: 60px;
     font-size: 30px;
     text-align: center;
-    padding-top: 9px;}
+    padding-top: 1px;
+}
+
+.tile2 {
+    float: left;
+    border-top: 6px solid #69faff;
+    border-left: 6px solid #69faff;
+    border-right: 6px solid #01495f;
+    border-bottom: 3px solid #01495f;
+    background: #00c3ff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1px;
+}
