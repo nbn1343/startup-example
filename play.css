@@ -27,7 +27,6 @@ main {
     
   }
 
-
 .s {
     background-color: #e94f12;
     margin: .2em;
@@ -38,10 +37,10 @@ main {
 
 .l {
     color: black;
-    background-color: #eeff00;
+    background-color: #c0ca2e;
     margin: .2em;
     rotate: -13deg;
-    border: 3px solid #e4f30d;
+    border: 3px solid #c0ca2e;
 }
 
 .i {
@@ -159,8 +158,8 @@ main {
 
 .button {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgb(145, 92, 182);
+    color: rgba(255, 255, 255, 0.774);
+    background: rgb(92, 154, 182);
     padding: 15px 40px;
     border-radius: 4px;
     font-weight: normal;
@@ -171,4 +170,72 @@ main {
 .glow-button:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
   }
+
+.s {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.s:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.l {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.l:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;}
+
+.i {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.i:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.d {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.d:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.e {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.e:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.r {
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+}.r:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
