@@ -61,21 +61,46 @@ main {
 .s {
     background-color: #e94f12;
     margin: .2em;
-    rotate: -20deg;
+    rotate: 13deg;
     border-bottom: 3px solid #e94f12;
     border: 3px solid #e94f12;
 }
 
 .l {
-    background-color: #e4f30d;
+    color: black;
+    background-color: #eeff00;
     margin: .2em;
-    rotate: -22deg;
+    rotate: -13deg;
     border: 3px solid #e4f30d;
 }
 
 .i {
     background-color: #05b414;
     margin: .2em;
-    rotate: -173deg;
+    rotate: 13deg;
     border: 3px solid #05b414;
 }
+
+.d {
+    color:#000000;
+    background-color: #cc00cc;
+    margin: .2em;
+    rotate: -13deg;
+    border: 3px solid #cc00cc;
+}
+
+.e {
+    background-color: #a10000;
+    margin: .2em;
+    rotate: 13deg;
+    border: 3px solid #a10000;
+}
+
+.r {
+    background-color: #5f00b8;
+    margin: .2em;
+    rotate: -13deg;
+    border: 3px solid #5f00b8;
+}
+
+    
