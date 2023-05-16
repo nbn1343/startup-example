@@ -167,3 +167,47 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
+.list-group-item {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.score-title {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 10px;
+}
+
+@media (max-height: 800px ) {
+    .slider-title {
+      display: none;
+    }
+    .nav-item {
+        flex-flow: column wrap;
+    }
+    footer {
+      display: none;
+    }
+    .chatbox {
+        display: none;
+    }
+    
+  }
+
+  @media (max-width: 800px ) {
+    .slider-title {
+      display: none;
+    }
+    .nav-item {
+        flex-flow: column wrap; ;
+    }
+    footer {
+      display: none;
+    }
+    .username {
+        width: 100px;
+        font-size: 10px; 
+    }
+  }

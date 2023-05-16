@@ -113,7 +113,6 @@ main {
 .button {
     display: flex;
     flex-direction: row;
-    text-decoration: none;
     color: rgba(255, 255, 255, 0.774);
     background: rgb(92, 154, 182);
     padding: 15px 40px;
@@ -122,6 +121,7 @@ main {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
   }
+
 
 .glow-button:hover {
     color: rgba(255, 255, 255, 1);
@@ -374,4 +374,8 @@ footer {
     .chatbox {
         display: none;
     }
+    .button {
+        width: 25px;
   }
+
+}
