@@ -180,12 +180,14 @@ main {
   }
 
 footer {
-    padding: px;
-    margin-bottom: 2px;
+    border-top: #000000;
     text-align: left;
+    position: absolute;
+    bottom: 0;
 }
 .my-repo {
     color: ;
+    margin-top: 10px;
     margin-left: 5px;
     font-weight: bold;
 }
