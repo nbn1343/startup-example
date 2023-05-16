@@ -23,7 +23,7 @@ main {
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    margin: 8em;
+    margin: 13em;
   }
 
 
@@ -177,4 +177,13 @@ footer {
 .my-repo {
     color: ;
     margin-left: 5px;
+    font-weight: bold;
+}
+
+.Git-btn {
+    color: rgb(251, 251, 253);
+    background-color: rgba(0, 255, 255, 0.692);
+    margin-left: 5px;
+    font-weight: bold;
+    border-radius: 5px;
 }
