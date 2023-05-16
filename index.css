@@ -21,8 +21,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin: 13em;
+    padding: 0px;
+    margin-top: 10em;
+    margin-bottom: 10em;
   }
 
 .login-direction {
@@ -33,7 +34,7 @@ main {
     padding: 20px;
     margin: 13em;
   }
-}
+
 
 
 
@@ -197,12 +198,12 @@ footer {
     border-radius: 5px;
 }
 
-@media (orientation: portrait) {
+/* @media (orientation: portrait) {
     main {
       flex-direction: column;
     
-    }
-  }
+    } */
+  
 
   @media (max-height: 800px ) {
     .slider-title {
@@ -221,6 +222,9 @@ footer {
   }
 
   @media (max-width: 800px ) {
+    main {
+        
+    }
     .slider-title {
       display: none;
     }
@@ -230,7 +234,8 @@ footer {
     footer {
       display: none;
     }
-    .chatbox {
-        display: none;
+    .username {
+        width: 100px;
+        font-size: 10px; 
     }
   }
