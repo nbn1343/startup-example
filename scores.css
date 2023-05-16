@@ -1,7 +1,6 @@
 header {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     text-align: left;
     
 }
@@ -164,6 +163,8 @@ main {
 }
 
 footer {
+    border-top: #000000;
+    text-align: left;
     position: absolute;
     bottom: 0;
 }
@@ -180,34 +181,3 @@ footer {
     margin-left: 10px;
 }
 
-@media (max-height: 800px ) {
-    .slider-title {
-      display: none;
-    }
-    .nav-item {
-        flex-flow: column wrap;
-    }
-    footer {
-      display: none;
-    }
-    .chatbox {
-        display: none;
-    }
-    
-  }
-
-  @media (max-width: 800px ) {
-    .slider-title {
-      display: none;
-    }
-    .nav-item {
-        flex-flow: column wrap; ;
-    }
-    footer {
-      display: none;
-    }
-    .username {
-        width: 100px;
-        font-size: 10px; 
-    }
-  }

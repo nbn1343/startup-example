@@ -1,8 +1,7 @@
 header {
     display: flex;
-    flex: 0 1000px;
+    flex: px;
     flex-direction: column;
-    padding: 10px;
     text-align: left;
     
 }
@@ -110,25 +109,62 @@ main {
     margin: 1px;
 }
 
-.button {
+.start-button {
     display: flex;
-    flex-direction: row;
-    color: rgba(255, 255, 255, 0.774);
-    background: rgb(92, 154, 182);
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-weight: normal;
-    text-transform: uppercase;
+    background-color: #0c95f0;
+    height: 50px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
     transition: all 0.2s ease-in-out;
   }
 
 
-.glow-button:hover {
+.start-button:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     border-color: rgb(255, 255, 255);
     font-weight: bold;
   }
+
+  .restart-button {
+    display: flex;
+    background-color: #0c95f0;
+    height: 50px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+
+
+.restart-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
+  .quit-button {
+    display: flex;
+    background-color: #0c95f0;
+    height: 50px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+
+
+.quit-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+  }  
 
 .s {
     transition: all 0.2s ease-in-out;
@@ -225,8 +261,8 @@ main {
 }
 
 .nav-item {
-    display: flex;
-    flex-flow: row wrap;
+    /* display: flex;
+    flex-flow: row wrap; */
     justify-content: flex-end;
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
@@ -347,9 +383,6 @@ footer {
   }
 
   @media (max-height: 800px ) {
-    .slider-title {
-      display: none;
-    }
     .nav-item {
         flex-flow: column wrap;
     }
@@ -362,8 +395,9 @@ footer {
   }
 
   @media (max-width: 800px ) {
-    .slider-title {
-      display: none;
+    
+    .instruction {
+        display: none;
     }
     .nav-item {
         flex-flow: column wrap; ;

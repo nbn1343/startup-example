@@ -186,7 +186,6 @@ footer {
     bottom: 0;
 }
 .my-repo {
-    color: ;
     margin-top: 10px;
     margin-left: 5px;
     font-weight: bold;
@@ -208,9 +207,6 @@ footer {
   
 
   @media (max-height: 800px ) {
-    .slider-title {
-      display: none;
-    }
     .nav-item {
         flex-flow: column wrap;
     }
@@ -220,15 +216,16 @@ footer {
     .chatbox {
         display: none;
     }
+    main {
+        margin-top: 5em;
+    }
     
   }
 
   @media (max-width: 800px ) {
+
     main {
-        
-    }
-    .slider-title {
-      display: none;
+        margin-top: 5em;
     }
     .nav-item {
         flex-flow: column wrap; ;
@@ -237,7 +234,12 @@ footer {
       display: none;
     }
     .username {
-        width: 100px;
-        font-size: 10px; 
+        width: 150px;
+        height: 40px;
+        font-size: 15px; 
     }
+  }
+
+  @media (max-width: 345px ) {
+    .slider-title {display: none;}
   }
