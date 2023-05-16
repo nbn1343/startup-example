@@ -382,6 +382,25 @@ footer {
   }
 
   @media (max-height: 800px ) {
+
+    .s {
+        display: none;
+    }
+    .l {
+        display: none;
+    }
+    .i {
+        display: none;
+    }
+    .d {
+        display: none;
+    }
+    .e {
+        display: none;
+    }
+    .r {
+        display: none;
+    }
     .nav-item {
         flex-flow: column wrap;
     }
@@ -394,6 +413,25 @@ footer {
   }
 
   @media (max-width: 800px ) {
+
+    .s {
+        display: none;
+    }
+    .l {
+        display: none;
+    }
+    .i {
+        display: none;
+    }
+    .d {
+        display: none;
+    }
+    .e {
+        display: none;
+    }
+    .r {
+        display: none;
+    }
     
     .instruction {
         display: none;
