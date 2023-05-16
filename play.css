@@ -112,6 +112,8 @@ main {
 .start-button {
     display: flex;
     background-color: #0c95f0;
+    color: black;
+    font-weight: 500;
     height: 50px;
     width: 90px;
     justify-content: center;
@@ -131,6 +133,8 @@ main {
   .restart-button {
     display: flex;
     background-color: #0c95f0;
+    color: black;
+    font-weight: 500;
     height: 50px;
     width: 90px;
     justify-content: center;
@@ -149,6 +153,8 @@ main {
 
   .quit-button {
     display: flex;
+    color: black;
+    font-weight: 500;
     background-color: #0c95f0;
     height: 50px;
     width: 90px;
