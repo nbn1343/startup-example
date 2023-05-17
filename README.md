@@ -36,7 +36,7 @@ For this I added the structure of the web application.
 * **WebSocket** - On the play page, there is realtime data showing players who have just started a game as well as ones who have finished with their time score.
 
 ## CSS Deliverable
-For this deliverable I properly styled the application
+For this deliverable I properly styled the application.
 * **Header** - Styled the header to look presentable. I added a picture of the game-look in the left to be a sybmbol for the website. I also colorized the title and titled the letters to be similar to the look of the tiles in the game. I added hover animation to each letter to add some user experience effects.
 * **Navigation** - I used Bootstrap to add navigational tabs. 
 * **Main** - I styled and created a proper layout for each page depending on the HTML structure. 
