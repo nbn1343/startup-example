@@ -47,3 +47,61 @@ for (let i = 0; i < 15; i++) {
 document.getElementById("newgame").addEventListener("click", randomizePuzzle);
 document.getElementById("solveit").addEventListener("click", solvePuzzle);
 randomizePuzzle();
+
+
+const chatbox = document.querySelector('.chatbox');
+const toggleChatButton = document.getElementById('toggleChat');
+const chatContent = document.getElementById('chatboxContent');
+const chatInput = document.getElementById('chatInput');
+const sendButton = document.getElementById('sendButton');
+
+let chatVisible = false;
+
+toggleChatButton.addEventListener('click', () => {
+  chatVisible = !chatVisible;
+  chatbox.style.display = chatVisible ? 'block' : 'none';
+});
+
+sendButton.addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+function sendMessage() {
+  const message = chatInput.value.trim();
+  if (message !== '') {
+    displayMessage('You', message);
+    chatInput.value = '';
+    simulateReply();
+  }
+}
+
+function displayMessage(sender, message) {
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message');
+  messageElement.innerHTML = `<strong>${sender}: </strong>${message}`;
+  chatContent.appendChild(messageElement);
+  chatContent.scrollTop = chatContent.scrollHeight;
+}
+
+function simulateReply() {
+  const senders = ['Cookie', 'Alexa', 'Nathan', 'Bob'];
+  const hardcodedMessages = [
+    'Hello!',
+    'How is everyone?',
+    'Have a great day!',
+    'What is your favorite game?',
+    'I like puzzles too!',
+    'I just got a highscore!!',
+    'See ya!',
+  ];
+  setInterval(() => {
+    const randomSender = senders[Math.floor(Math.random() * senders.length)];
+    const randomMessage = hardcodedMessages[Math.floor(Math.random() * hardcodedMessages.length)];
+    displayMessage(randomSender, randomMessage);
+  }, Math.random() * 3000 + 2000);
+}
+
+simulateReply();
