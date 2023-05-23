@@ -50,17 +50,11 @@ randomizePuzzle();
 
 
 const chatbox = document.querySelector('.chatbox');
-const toggleChatButton = document.getElementById('toggleChat');
 const chatContent = document.getElementById('chatboxContent');
 const chatInput = document.getElementById('chatInput');
 const sendButton = document.getElementById('sendButton');
 
 let chatVisible = false;
-
-toggleChatButton.addEventListener('click', () => {
-  chatVisible = !chatVisible;
-  chatbox.style.display = chatVisible ? 'block' : 'none';
-});
 
 sendButton.addEventListener('click', sendMessage);
 chatInput.addEventListener('keydown', (event) => {
@@ -89,13 +83,31 @@ function displayMessage(sender, message) {
 function simulateReply() {
   const senders = ['Cookie', 'Alexa', 'Nathan', 'Bob'];
   const hardcodedMessages = [
-    'Hello!',
-    'How is everyone?',
-    'Have a great day!',
-    'What is your favorite game?',
-    'I like puzzles too!',
-    'I just got a highscore!!',
-    'See ya!',
+    'Hi there!',
+  'How are you doing today?',
+  'What have you been up to lately?',
+  'Nice weather were having, isnt it?',
+  'Do you have any fun plans for the weekend?',
+  'I recently watched a great movie. Have you seen any good movies lately?',
+  'Whats your favorite type of music?',
+  'Im really into cooking. Do you enjoy cooking as well?',
+  'Im planning a trip to a new city. Any recommendations?',
+  'Im a big fan of hiking. Do you have any favorite outdoor activities?',
+  'What do you do for a living?',
+  'Have you tried any new restaurants recently?',
+  'Do you have any pets?',
+  'I love reading books. Any book recommendations?',
+  'Whats the last concert you attended?',
+  'I enjoy playing video games. Are you a gamer?',
+  'Im thinking about starting a new hobby. Any suggestions?',
+  'Whats your favorite TV show?',
+  'I love traveling. Whats the most memorable trip youve taken?',
+  'Do you follow any sports teams?',
+  'Im learning a new language. Have you ever tried learning a foreign language?',
+  'Do you enjoy going to art galleries or museums?',
+  'Im looking for new podcasts to listen to. Any recommendations?',
+  'Whats your go-to exercise or workout routine?',
+  'I enjoy trying out new recipes. Do you have a favorite dish?',
   ];
   setInterval(() => {
     const randomSender = senders[Math.floor(Math.random() * senders.length)];
