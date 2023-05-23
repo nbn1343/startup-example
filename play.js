@@ -81,7 +81,7 @@ function displayMessage(sender, message) {
 }
 
 function simulateReply() {
-  const senders = ['Cookie', 'Alexa', 'Nathan', 'Bob'];
+  const senders = ['Cookie', 'Alexa', 'Nathan', 'Bob', 'Jared', 'Donald', 'Austin'];
   const hardcodedMessages = [
     'Hi there!',
   'How are you doing today?',
@@ -113,7 +113,7 @@ function simulateReply() {
     const randomSender = senders[Math.floor(Math.random() * senders.length)];
     const randomMessage = hardcodedMessages[Math.floor(Math.random() * hardcodedMessages.length)];
     displayMessage(randomSender, randomMessage);
-  }, Math.random() * 3000 + 2000);
+  }, Math.random() * 4000 + 2000);
 }
 
 simulateReply();
