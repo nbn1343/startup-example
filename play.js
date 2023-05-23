@@ -6,4 +6,4 @@ document.addEventListener('DOMContentLoaded', function () {
     let timeBox = document.querySelector('.time-box');
     let chatInput = document.querySelector('.input-group input');
     let chatButton = document.querySelector('.input-group button');
-    let chatbox = document.querySelector('.chatbox');
+    let chatbox = document.querySelector('.chatbox'); })
