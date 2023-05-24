@@ -3,10 +3,9 @@ const storedUsername = localStorage.getItem('username');
 
 // Check if the username exists
 if (storedUsername) {
-  // Display the username on the page
-  const usernameElement = document.createElement('h2');
-  usernameElement.textContent = 'Welcome, ' + storedUsername + '!';
-  document.body.appendChild(usernameElement);
+  // Display the username at the top of the page
+  const welcomeMessage = document.getElementById('welcomeMessage');
+  welcomeMessage.textContent = 'Welcome, ' + storedUsername + '!';
 }
 
 

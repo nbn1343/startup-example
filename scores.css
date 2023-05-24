@@ -173,11 +173,37 @@ footer {
 
 }
 
-.score-title {
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: 10px;
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #05b414;
+    font-weight: bold;
+}
+
+tr {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+.position {
+    width: 50px;
+}
+
+
 
 @media (orientation: portrait) {
     main {
