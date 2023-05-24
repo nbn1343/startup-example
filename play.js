@@ -50,11 +50,17 @@ randomizePuzzle();
 
 
 const chatbox = document.querySelector('.chatbox');
+const toggleChatButton = document.getElementById('toggleChat');
 const chatContent = document.getElementById('chatboxContent');
 const chatInput = document.getElementById('chatInput');
 const sendButton = document.getElementById('sendButton');
 
 let chatVisible = false;
+
+toggleChatButton.addEventListener('click', () => {
+    chatVisible = !chatVisible;
+    chatbox.style.display = chatVisible ? 'block' : 'none';
+  });
 
 sendButton.addEventListener('click', sendMessage);
 chatInput.addEventListener('keydown', (event) => {
