@@ -45,3 +45,10 @@ For this deliverable I properly styled the application.
 * **Footer**- The base has my Github link with a colorful link button.
 * **Flex** - The website is able to adjust based on the height and width of the screen. It also properly adjusts to smaller devices to look appealing and user friendly.
 * **Text** - The text style differs depending on where it is and its purpose. 
+
+## JavaScript Deliverable
+For this deliverable I made it so my application was able to save user data in the browser and create functionality of the game:
+* **Game**- I used JavaScript to create a properly functioning game that keeps track of the number of times the player moves a tile. When completed the moves are placed in localStorage and used for the scoreboard.
+* **Chatbox**- I created a chatbox where the user can interact with and type in. I then created a mock database where automated bot chats are being implemented.
+* **Websocket**- With the chatbox, I used the setInterval function to show chats from different people to fill in for how it will work later on.
+* **Username**- The username is saved on input and displayed in the play section of the application.
