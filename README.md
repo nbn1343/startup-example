@@ -48,7 +48,7 @@ For this deliverable I properly styled the application.
 
 ## JavaScript Deliverable
 For this deliverable I made it so my application was able to save user data in the browser and create functionality of the game:
-* **Game**- I used JavaScript to create a properly functioning game that keeps track of the number of times the player moves a tile. When completed the moves are placed in localStorage and used for the scoreboard.
+* **Game**- I used JavaScript to create a properly functioning game that keeps track of the number of times the player moves a tile. The tiles slide to the open spot if next to it when clicked. They are shuffled when the page opens and will shuffle everytime the New Game button is clicked. You can see what the solution should look like by clicking the solve it button. When completed the moves are placed in localStorage and used for the scoreboard.
 * **Chatbox**- I created a chatbox where the user can interact with and type in. I then created a mock database where automated bot chats are being implemented.
 * **Websocket**- With the chatbox, I used the setInterval function to show chats from different people to fill in for how it will work later on.
 * **Username**- The username is saved on input and displayed in the play section of the application.
