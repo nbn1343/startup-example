@@ -2,6 +2,24 @@ function login() {
     const nameEl = document.querySelector("#name");
     localStorage.setItem("userName", nameEl.value);
     window.location.href = "play.html"; };
+    
+    function displayPicture() {
+        const random = Math.floor(Math.random() * 1000);
+        fetch(`https://picsum.photos/v2/list?page=${random}&limit=1`)
+          .then((response) => response.json())
+          .then((data) => {
+            const containerEl = document.querySelector('#picture');
+      
+            const width = containerEl.offsetWidth;
+            const height = containerEl.offsetHeight;
+      
+            const imgUrl = `https://picsum.photos/id/${data[0].id}/${width}/${height}?grayscale`;
+            const imgEl = document.createElement('img');
+            imgEl.setAttribute('src', imgUrl);
+            containerEl.appendChild(imgEl);
+          });
+      }
+      
 
 function displayQuote(data) {
     fetch('https://api.quotable.io/random')
@@ -20,5 +38,7 @@ function displayQuote(data) {
         containerEl.appendChild(quoteEl);
         containerEl.appendChild(authorEl);
         });
-    }      
-      displayQuote();
+    }
+
+displayPicture();
+displayQuote();

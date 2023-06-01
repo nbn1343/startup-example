@@ -205,6 +205,19 @@ footer {
   .quote {
     font-style: italic;
   }
+
+  .picture-box {
+    height: calc(100px + 1em);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background: rgb(86, 89, 93);
+    border-radius: 5px;
+    width: 10em;
+  }
+  #picture img {
+    width: 100%;
+    height: 100%;
+  }
   
 
   @media (max-height: 800px ) {
