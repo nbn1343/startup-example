@@ -1,4 +1,5 @@
 const storedUsername = localStorage.getItem('username');
+window.addEventListener('load', updateScoreboard);
 
 if (storedUsername) {
   const welcomeMessage = document.getElementById('welcomeMessage');

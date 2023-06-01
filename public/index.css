@@ -196,11 +196,15 @@ footer {
     border-radius: 5px;
 }
 
-/* @media (orientation: portrait) {
-    main {
-      flex-direction: column;
-    
-    } */
+.quote-box {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+
+  .quote {
+    font-style: italic;
+  }
   
 
   @media (max-height: 800px ) {
