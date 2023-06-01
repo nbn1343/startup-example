@@ -52,3 +52,11 @@ For this deliverable I made it so my application was able to save user data in t
 * **Chatbox**- I created a chatbox where the user can interact with and type in. I then created a mock database where automated bot chats are being implemented.
 * **Websocket**- With the chatbox, I used the setInterval function to show chats from different people to fill in for how it will work later on.
 * **Username**- The username is saved on input and displayed in the play section of the application.
+
+## Service Deliverable
+For this section of my application, I created an HTTP service to host my frontend and backend endpoints.
+* **Node.js and Express HTTP service**- completed
+* **Static middleware for frontend**- completed
+* **Third party endpoints**- used the same structure as the Simon application to upload quotes and pictures.
+* **Backend**- set up an HTTP service that serves the frontend content statically and defines service endpoints for retrieving and submitting scores.
+* **Frontend**- functions for loggin in a user, displaying a random picture and quotes from third-party APIs, and can make requests to retrieve and submit scores.
