@@ -60,3 +60,9 @@ For this section of my application, I created an HTTP service to host my fronten
 * **Third party endpoints**- used the same structure as the Simon application to upload quotes and pictures.
 * **Backend**- set up an HTTP service that serves the frontend content statically and defines service endpoints for retrieving and submitting scores.
 * **Frontend**- functions for loggin in a user, displaying a random picture and quotes from third-party APIs, and can make requests to retrieve and submit scores.
+
+## Database Deliverable
+For this section of my application, I stored and retrieved data from MongoDB.
+* **MongoDB**- completed.
+* **Ednpoints for data**- used same structure as Simon to process data and send it to Mongo.
+* **Storing data in MongoDB**- completed.
