@@ -39,4 +39,34 @@ function updateScoreboard() {
   });
 }
 
+function displayScores() {
+  fetch('/api/scores')
+    .then((response) => response.json())
+    .then((data) => {
+      // Process and display the scores data on the frontend
+      console.log(data);
+    });
+}
+
+function submitScore() {
+  const scoreData = {
+    // Create an object with the necessary data for submitting a score
+    score: 100,
+    playerName: 'John Doe'
+  };
+
+  fetch('/api/score', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(scoreData)
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Process the updated scores data received from the backend
+      console.log(data);
+    });
+}
+
 updateScoreboard();
