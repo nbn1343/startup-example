@@ -40,10 +40,9 @@ function getUser(email) {
   }
   
 
-async function addScore(score) {
-  const result = await scoreCollection.insertOne(score);
-  return result;
-}
+function addScore(score) {
+    scoreCollection.insertOne(score);
+  }
 
 function getHighScores() {
   const query = { score: { $gt: 0, $lt: 900 } };
