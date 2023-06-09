@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
-// const { WebSocketServer } = require('ws');
+const { chatbox } = require('./chatbox.js'); 
 
 const authCookieName = 'token';
 
@@ -12,11 +12,17 @@ const port = process.argv.length > 2 ? process.argv[2] : 4000;
 // JSON body parsing using built-in middleware
 app.use(express.json());
 
+// Use the cookie parser middleware for tracking authentication tokens
+app.use(cookieParser());
+
 // Serve up the frontend static content hosting
 app.use(express.static('public'));
 
+// Trust headers that are forwarded from the proxy so we can determine IP addresses
+app.set('trust proxy', true);
+
 // Router for service endpoints
-const apiRouter = express.Router();
+var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
@@ -81,14 +87,17 @@ secureApiRouter.use(async (req, res, next) => {
 
 
 // GetScores
-apiRouter.get('/scores', (_req, res) => {
+secureApiRouter.get('/scores', async (req, res) => {
+  const scores = await DB.getHighScores();
   res.send(scores);
 });
 
 
 // SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = updateScores(req.body, scores);
+secureApiRouter.post('/score', async (req, res) => {
+  const score = { ...req.body, ip: req.ip };
+  await DB.addScore(score);
+  const scores = await DB.getHighScores();
   res.send(scores);
 });
 
@@ -111,64 +120,9 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-// // Serve up our webSocket client HTML
-// app.use(express.static('./public'));
 
-// // Create a websocket object
-// const wss = new WebSocketServer({ noServer: true });
-
-// // Handle the protocol upgrade from HTTP to WebSocket
-// // server.on('upgrade', (request, socket, head) => {
-// //   wss.handleUpgrade(request, socket, head, function done(ws) {
-// //     wss.emit('connection', ws, request);
-// //   });
-// // });
-
-// // Keep track of all the connections so we can forward messages
-// let connections = [];
-
-// wss.on('connection', (ws) => {
-//   const connection = { id: connections.length + 1, alive: true, ws: ws };
-//   connections.push(connection);
-
-//   // Forward messages to everyone except the sender
-//   ws.on('message', function message(data) {
-//     connections.forEach((c) => {
-//       if (c.id !== connection.id) {
-//         c.ws.send(data);
-//       }
-//     });
-//   });
-
-//   // Remove the closed connection so we don't try to forward anymore
-//   ws.on('close', () => {
-//     connections.findIndex((o, i) => {
-//       if (o.id === connection.id) {
-//         connections.splice(i, 1);
-//         return true;
-//       }
-//     });
-//   });
-
-//   // Respond to pong messages by marking the connection alive
-//   ws.on('pong', () => {
-//     connection.alive = true;
-//   });
-// });
-
-// // Keep active connections alive
-// setInterval(() => {
-//   connections.forEach((c) => {
-//     // Kill any connection that didn't respond to the ping last time
-//     if (!c.alive) {
-//       c.ws.terminate();
-//     } else {
-//       c.alive = false;
-//       c.ws.ping();
-//     }
-//   });
-// }, 10000);
-
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+chatbox(httpService);
