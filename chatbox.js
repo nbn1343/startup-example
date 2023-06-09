@@ -56,6 +56,6 @@ setInterval(() => {
     }
   });
 }, 10000);
+}
 
-
-module.exports = { chatbox };
+module.exports = { chatbox }; 
