@@ -111,8 +111,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-// Serve up our webSocket client HTML
-app.use(express.static('./public'));
+// // Serve up our webSocket client HTML
+// app.use(express.static('./public'));
 
 // Create a websocket object
 // const wss = new WebSocketServer({ noServer: true });
