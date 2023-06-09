@@ -7,6 +7,8 @@ const { WebSocketServer } = require('ws');
 
 const authCookieName = 'token';
 
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
+
 // JSON body parsing using built-in middleware
 app.use(express.json());
 
@@ -112,20 +114,15 @@ function setAuthCookie(res, authToken) {
 // Serve up our webSocket client HTML
 app.use(express.static('./public'));
 
-const port = process.argv.length > 2 ? process.argv[2] : 3000;
-server = app.listen(port, () => {
-  console.log(`Listening on ${port}`);
-});
-
 // Create a websocket object
 const wss = new WebSocketServer({ noServer: true });
 
 // Handle the protocol upgrade from HTTP to WebSocket
-server.on('upgrade', (request, socket, head) => {
-  wss.handleUpgrade(request, socket, head, function done(ws) {
-    wss.emit('connection', ws, request);
-  });
-});
+// server.on('upgrade', (request, socket, head) => {
+//   wss.handleUpgrade(request, socket, head, function done(ws) {
+//     wss.emit('connection', ws, request);
+//   });
+// });
 
 // Keep track of all the connections so we can forward messages
 let connections = [];
