@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
-const { WebSocketServer } = require('ws');
+// const { WebSocketServer } = require('ws');
 
 const authCookieName = 'token';
 
