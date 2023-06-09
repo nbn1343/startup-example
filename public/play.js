@@ -154,41 +154,4 @@ function displayMessage(sender, message) {
   chatContent.scrollTop = chatContent.scrollHeight;
 }
 
-function simulateReply() {
-  const senders = ['Cookie', 'Alexa', 'Nathan', 'Bob', 'Jared', 'Donald', 'Austin'];
-  const hardcodedMessages = [
-    'Hi there!',
-    'How are you doing today?',
-    'What have you been up to lately?',
-    'Nice weather we\'re having, isn\'t it?',
-    'Do you have any fun plans for the weekend?',
-    'I recently watched a great movie. Have you seen any good movies lately?',
-    'What\'s your favorite type of music?',
-    'I\'m really into cooking. Do you enjoy cooking as well?',
-    'I\'m planning a trip to a new city. Any recommendations?',
-    'I\'m a big fan of hiking. Do you have any favorite outdoor activities?',
-    'What do you do for a living?',
-    'Have you tried any new restaurants recently?',
-    'Do you have any pets?',
-    'I love reading books. Any book recommendations?',
-    'What\'s the last concert you attended?',
-    'I enjoy playing video games. Are you a gamer?',
-    'I\'m thinking about starting a new hobby. Any suggestions?',
-    'What\'s your favorite TV show?',
-    'I love traveling. What\'s the most memorable trip you\'ve taken?',
-    'Do you follow any sports teams?',
-    'I\'m learning a new language. Have you ever tried learning a foreign language?',
-    'Do you enjoy going to art galleries or museums?',
-    'I\'m looking for new podcasts to listen to. Any recommendations?',
-    'What\'s your go-to exercise or workout routine?',
-    'I enjoy trying out new recipes. Do you have a favorite dish?',
-  ];
-  setInterval(() => {
-    const randomSender = senders[Math.floor(Math.random() * senders.length)];
-    const randomMessage = hardcodedMessages[Math.floor(Math.random() * hardcodedMessages.length)];
-    displayMessage(randomSender, randomMessage);
-  }, Math.random() * 4000 + 2000);
-}
 
-
-simulateReply();
