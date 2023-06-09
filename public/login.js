@@ -29,11 +29,10 @@
       },
     });
   
-    if (response.ok) {
+    try {
       localStorage.setItem('userName', userName);
       window.location.href = 'play.html';
-    } else {
-        try { 
+    } catch { 
             const body = await response.json();
             const modalEl = document.querySelector('#msgModal');
             modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -41,10 +40,6 @@
             msgModal.show();
 
         }
-        catch {
-            console.log('Error')
-        }
-    }
   }
   
   function play() {
