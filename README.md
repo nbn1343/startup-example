@@ -66,3 +66,16 @@ For this section of my application, I stored and retrieved data from MongoDB.
 * **MongoDB**- completed.
 * **Ednpoints for data**- used same structure as Simon to process data and send it to Mongo.
 * **Storing data in MongoDB**- completed.
+
+## Login Deliverable
+For this deliverable I added authentication and user registration to my application
+* **User registration**- Creates new account to the database when creating a new username and password.
+* **Verification**- Verifies the username and password from database to see if there is an existing user.
+* **MongoDB**- Used to store credentials of the user.
+* **Restriction**-You can only access the scores and play page if you successfully login.
+
+## WebSocket Deliverable
+* **Backend listens for WebSocket connection**- completed.
+* **Frontend makes WebSocket connection**- completed.
+* **Data sent over WebSocket connection**- completed.
+* **WebSocket data displayed**- chat box displays chats in realtime.
