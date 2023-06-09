@@ -75,6 +75,7 @@ For this deliverable I added authentication and user registration to my applicat
 * **Restriction**-You can only access the scores and play page if you successfully login.
 
 ## WebSocket Deliverable
+For this section of the application, I enabled realtime chat functionality for users.
 * **Backend listens for WebSocket connection**- completed.
 * **Frontend makes WebSocket connection**- completed.
 * **Data sent over WebSocket connection**- completed.
