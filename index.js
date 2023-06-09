@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
-const { chatbox } = require('./chatbox.js'); 
 
 const authCookieName = 'token';
 
-const port = process.argv.length > 2 ? process.argv[2] : 4000;
+// The service port may be set on the command line
+const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(express.json());
 // Use the cookie parser middleware for tracking authentication tokens
 app.use(cookieParser());
 
-// Serve up the frontend static content hosting
+// Serve up the applications static content
 app.use(express.static('public'));
 
 // Trust headers that are forwarded from the proxy so we can determine IP addresses
@@ -85,13 +85,11 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
-
 // GetScores
 secureApiRouter.get('/scores', async (req, res) => {
   const scores = await DB.getHighScores();
   res.send(scores);
 });
-
 
 // SubmitScore
 secureApiRouter.post('/score', async (req, res) => {
@@ -120,9 +118,6 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-
-const httpService = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-chatbox(httpService);
