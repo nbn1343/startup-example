@@ -8,6 +8,8 @@ const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
+const { wss } = require('./path/to/websocket/server');
+
 
 (async function testConnection() {
   await client.connect();
@@ -40,19 +42,38 @@ function getUser(email) {
   }
   
 
-function addScore(score) {
+  function addScore(score) {
+    // Insert the score into the database
     scoreCollection.insertOne(score);
+  
+    // Send the score to all connected clients via WebSocket
+    const message = JSON.stringify({ type: 'newScore', score });
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
   }
 
-function getHighScores() {
-  const query = { score: { $gt: 0, $lt: 900 } };
-  const options = {
-    sort: { score: -1 },
-    limit: 10,
-  };
-  const cursor = scoreCollection.find(query, options);
-  return cursor.toArray();
-}
+  async function getHighScores() {
+    const query = { score: { $gt: 0, $lt: 900 } };
+    const options = {
+      sort: { score: -1 },
+      limit: 10,
+    };
+    const cursor = scoreCollection.find(query, options);
+    const scores = await cursor.toArray();
+  
+    // Send the high scores to the client via WebSocket
+    const message = JSON.stringify({ type: 'highScores', scores });
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
+  
+    return scores;
+  }
 
 module.exports = {
     getUser,
