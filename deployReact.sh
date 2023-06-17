@@ -17,28 +17,34 @@ printf "\n----> Deploying React bundle $service to $hostname with $key\n"
 
 # Step 1
 printf "\n----> Build the distribution package\n"
-rm -rf dist
-mkdir dist
+rm -rf build
+mkdir build
 npm install # make sure vite is installed so that we can bundle
 npm run build # build the React front end
-cp -rf build dist/public # move the React front end to the target distribution
-cp service/*.js dist # move the back end service to the target distribution
-cp service/*.json dist
+cp -rf dist build/public # move the React front end to the target distribution
+cp service/*.js build # move the back end service to the target distribution
+cp service/*.json build
 
 # Step 2
 printf "\n----> Clearing out previous distribution on the target\n"
-Expand All
-	@@ -34,7 +34,7 @@ ENDSSH
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+rm -rf services/${service}
+mkdir -p services/${service}
+ENDSSH
 
 # Step 3
 printf "\n----> Copy the distribution package to the target\n"
-scp -r -i "$key" dist/* ubuntu@$hostname:services/$service
+scp -r -i "$key" build/* ubuntu@$hostname:services/$service
 
 # Step 4
 printf "\n----> Deploy the service on the target\n"
-Expand All
-	@@ -47,4 +47,4 @@ ENDSSH
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+bash -i
+cd services/${service}
+npm install
+pm2 restart ${service}
+ENDSSH
 
 # Step 5
 printf "\n----> Removing local copy of the distribution package\n"
-rm -rf dist
+rm -rf build
