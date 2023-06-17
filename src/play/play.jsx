@@ -1,72 +1,84 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './play.css';
-// import ',/play.js';
-
 
 export function Play() {
-  function randomizePuzzle() {
-    movesNum = 0;
-    movescell.innerHTML = movesNum;
-    [emptyRow, emptyCol] = [4, 4];
-    let positions = [
-      [1, 1],
-      [1, 2],
-      [1, 3],
-      [1, 4],
-      [2, 1],
-      [2, 2],
-      [2, 3],
-      [2, 4],
-      [3, 1],
-      [3, 2],
-      [3, 3],
-      [3, 4],
-      [4, 1],
-      [4, 2],
-      [4, 3],
-      [4, 4],
-    ];
-    for (let i = 14; i >= 0; i--) {
-      let r = Math.round(Math.random() * i);
-      let poppedPos = positions.splice(r, 1);
-      tiles[i].style.gridRow = poppedPos[0][0];
-      tiles[i].style.gridColumn = poppedPos[0][1];
+  const [movesNum, setMovesNum] = useState(0);
+  const [tiles, setTiles] = useState(Array.from(Array(16).keys()));
+
+  useEffect(() => {
+    randomizePuzzle();
+  }, []);
+
+  const moveTile = (index) => {
+    if (isValidMove(index)) {
+      const emptyIndex = tiles.indexOf(0);
+      const updatedTiles = [...tiles];
+      [updatedTiles[emptyIndex], updatedTiles[index]] = [updatedTiles[index], updatedTiles[emptyIndex]];
+      setTiles(updatedTiles);
+      setMovesNum((prevMovesNum) => prevMovesNum + 1);
+      checkPuzzleCompletion(updatedTiles);
     }
+  };
+
+  const isValidMove = (index) => {
+    const emptyIndex = tiles.indexOf(0);
+    const rowDiff = Math.floor(index / 4) - Math.floor(emptyIndex / 4);
+    const colDiff = (index % 4) - (emptyIndex % 4);
+    return (rowDiff === 0 && Math.abs(colDiff) === 1) || (colDiff === 0 && Math.abs(rowDiff) === 1);
+  };
+
+  const checkPuzzleCompletion = (updatedTiles) => {
+    const isCompleted = updatedTiles.every((tile, index) => tile === index + 1);
+    if (isCompleted) {
+      // Puzzle completed logic here
+    }
+  };
+
+  const randomizePuzzle = () => {
+    const shuffledTiles = [...tiles];
+    for (let i = shuffledTiles.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledTiles[i], shuffledTiles[j]] = [shuffledTiles[j], shuffledTiles[i]];
+    }
+    setTiles(shuffledTiles);
+    setMovesNum(0);
+  };
+
+  const solvePuzzle = () => {
+    setMovesNum(0);
+    setTiles(Array.from(Array(16).keys())); // Reset tiles to initial ordered state
+    checkPuzzleCompletion(Array.from(Array(16).keys()));
+  };
+
   return (
     <main>
       <figure className="SlidingPuzzleFigure">
         <section>
           <ul className="SlidingPuzzle">
-            <li className="Tile Tile1">1</li>
-            <li className="Tile Tile2">2</li>
-            <li className="Tile Tile3">3</li>
-            <li className="Tile Tile4">4</li>
-            <li className="Tile Tile5">5</li>
-            <li className="Tile Tile6">6</li>
-            <li className="Tile Tile7">7</li>
-            <li className="Tile Tile8">8</li>
-            <li className="Tile Tile9">9</li>
-            <li className="Tile Tile10">10</li>
-            <li className="Tile Tile11">11</li>
-            <li className="Tile Tile12">12</li>
-            <li className="Tile Tile13">13</li>
-            <li className="Tile Tile14">14</li>
-            <li className="Tile Tile15">15</li>
-            <li className="Tile EmptyTile"></li>
+            {tiles.map((tile, index) => (
+              <li
+                className={`Tile Tile${tile}${tile === 0 ? ' EmptyTile' : ''}`}
+                key={index}
+                onClick={() => moveTile(index)}
+              >
+                {tile}
+              </li>
+            ))}
           </ul>
           <div>
             <div className="moves">
-              Moves: <span id="movesnum">0</span>
+              Moves: <span id="movesnum">{movesNum}</span>
             </div>
-            <button type="button" id="newgame">
+            <button type="button" id="newgame" onClick={randomizePuzzle}>
               New Game
             </button>
-            <button type="button" id="solveit">
-              Solve It!
+            <button type="button" id="solvepuzzle" onClick={solvePuzzle}>
+              Solve!
             </button>
           </div>
         </section>
       </figure>
     </main>
   );
-} }
+}
+
