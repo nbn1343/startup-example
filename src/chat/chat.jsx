@@ -10,10 +10,12 @@ export function Chat() {
   };
 
   return (
+    <main>
     <div className="chat-page">
       <h1>Welcome to the Chat Page</h1>
       <ChatBox onNewMessage={handleNewMessage} messages={messages} />
     </div>
+    </main>
   );
 };
 
