@@ -80,3 +80,10 @@ For this section of the application, I enabled realtime chat functionality for u
 * **Frontend makes WebSocket connection**- completed.
 * **Data sent over WebSocket connection**- completed.
 * **WebSocket data displayed**- chat box displays chats in realtime.
+
+## React
+For this section of my application, I converted the code to use React.
+* **Components**- Login, play, scores, and chat are all components.
+* **Router**- Used in logging into the application.
+* **Hooks**- Used in the functionality of the game.
+* **Bundled and transpiled**- completed.
