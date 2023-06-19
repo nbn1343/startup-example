@@ -8,7 +8,7 @@ const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
-const { wss } = require('./path/to/websocket/server');
+// const { wss } = require('./path/to/websocket/server');
 
 
 (async function testConnection() {
